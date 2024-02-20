@@ -19,13 +19,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let country of countries; let i = index">
-        <td><a [routerLink]="['/countries/country', country.cca3]">Ver más...</a></td>
-        <td><img [src]="country.flags.png" alt="{{ country.name.common }}"></td>
-        <td><img [src]="country.flags.svg" alt="{{ country.name.common }}"></td>
-        <td>{{ country.name.common }}</td>
-        <td>{{ country.capital }}</td>
-        <td>{{ country.population }}</td>
+      <tr *ngFor="let data of countries; let i = index">
+        <td><a [routerLink]="['/countries/country/', data.cca3]">Ver más...</a></td>
+        <td><img [src]="data.flags.png" alt="{{ data.flags.alt }} Flag" width="50" height="30" /></td>
+        <td><img [src]="data.coatOfArms.svg" alt="icono of {{data.name.common}}" width="30" height="30"></td>
+        <td>{{ data.name.common }}</td>
+        <td>{{ data.capital }}</td>
+        <td>{{ data.population }}</td>
         <td></td>
       </tr>
     </tbody>

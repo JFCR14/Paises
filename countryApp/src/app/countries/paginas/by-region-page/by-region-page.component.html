@@ -1,1 +1,12 @@
-<p>by-region-page works!</p>
+<div class="container">
+    <h1>Países por región</h1>
+  
+    <app-search-box [placeholder]="placeholder" (onEnter)="onSearch($event)"></app-search-box>
+  
+    <ul class="list-unstyled">
+      <li *ngFor="let country of countries">
+        <app-country-table [countries]="countries"></app-country-table>
+      </li>
+    </ul>
+  
+  </div>
