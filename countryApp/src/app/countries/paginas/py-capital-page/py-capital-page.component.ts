@@ -3,13 +3,13 @@ import { SearchBoxComponent } from '../../../shared/component/search-box/search-
 import { CountryService } from '../../servicios/country.service';
 import { Country } from '../../interfaces/country';
 import { CommonModule } from '@angular/common';
-import { CountryTableComponent } from '../../components/country-table/country-tables/country-tables.component';
+import { CountryTableComponent } from '../../components/country-table/country-tables.component';
 
 @Component({
   selector: 'app-by-capital-page',
   standalone: true,
   imports: [SearchBoxComponent, CommonModule, CountryTableComponent],
-  templateUrl: './by-capital-page.component.html',
+  templateUrl: './py-capital-page.component.html',
   styles: `
   .container {
     margin-bottom: 40%;
