@@ -1,27 +1,37 @@
-# CountryApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Documentación Técnica - countryApp
+Inicio del Proyecto
+Se ha creado un nuevo proyecto Angular llamado countryApp.
+Se ha integrado Bootstrap a través de su CDN para estilos globales en toda la aplicación.
+Estructura del Proyecto
+Se han añadido dos carpetas principales: countries y shared.
+Dentro de shared, se han creado las carpetas components y pages.
+Enrutamiento
+Se ha configurado el enrutamiento para las siguientes rutas: home, about y contact. La ruta por defecto es home.
+El archivo de enrutamiento se encuentra en app.route.ts.
+Barra lateral
+Se ha creado el componente sidebar dentro de shared/components.
+La barra lateral contiene enlaces a las páginas de inicio y acerca de.
+Se utiliza la directiva routerLink para la navegación.
+Componentes en countries
+Se han generado nuevos componentes dentro de la carpeta pages.
+Los nombres de los componentes son: byCapitalPage, byCountryPage, byRegionPage, y countryPage.
+Se ha aplicado lazy-loading para cargar las rutas del módulo countries.routes.ts.
+Búsqueda de Países
+Se ha creado el componente searchBox dentro de shared/components.
+El componente incluye un formulario para introducir el término de búsqueda.
+El término de búsqueda se pasa al componente byCapitalPage mediante @Output() y EventEmitter.
+Se ha implementado el manejo de errores en el servicio country.service.ts.
+Backend y Servicio de Conexión
+Se ha establecido una conexión HTTP a la API-Rest de restcountries.com para obtener información sobre países.
+Se ha definido la interfaz Country en la carpeta interfaces.
+Resultados por Pantalla
+Se ha creado el componente country-table para presentar los resultados de búsqueda.
+El componente recibe los datos de países mediante @Input() y muestra una tabla con los resultados.
+Se han incluido enlaces en la tabla para ver más detalles de cada país.
+Vista Detallada de la Información
+Se ha implementado el paso de parámetros por URL para ver detalles de un país específico.
+El componente country-page recibe el código del país en la URL y muestra información detallada.
+Se ha creado una plantilla para el componente de detalle con información como la bandera, población y traducciones.
+Enlace desde country-table
+Se han añadido enlaces desde el componente country-table para ver detalles de cada país.
+Los enlaces utilizan la directiva [routerLink] y pasan el código del país como parámetro
