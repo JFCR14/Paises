@@ -1,6 +1,4 @@
 
-Gracias por proporcionar los archivos de tu proyecto. Con esta información, puedo hacer la documentación técnica más detallada y específica. Aquí está la documentación revisada:
-
 Documentación Técnica - countryApp
 Servicio de Países (country.service.ts)
 Este servicio se encarga de manejar las solicitudes HTTP para obtener datos sobre países desde la API de restcountries.com.
